@@ -31,7 +31,7 @@ public:
     {
         int b = czesci[2]->GetValue();
         if (b == 0)
-            cout << "Najpierw wrzuc bieg" << endl;
+            throw 1;
         else
         {
             int predkosc_max = 180;
@@ -39,7 +39,7 @@ public:
             if (pred < predkosc_max)
                 pred += 5;
             else
-                cout << "Samochod nie moze jechac szybciej" << endl;
+                throw string("string");
             czesci[0]->SetValue(pred);
         }
     }
@@ -48,7 +48,7 @@ public:
     {
         int b = czesci[2]->GetValue();
         if (b >= 5)
-            cout << "Nie ma wyzszego biegu" << endl;
+            throw 'a';
         else
         {
             b += 1;
@@ -60,7 +60,7 @@ public:
     {
         int b = czesci[2]->GetValue();
         if (b == 0)
-            cout << "Najpierw wrzuc bieg" << endl;
+            throw 1;
         else
         {
             int predkosc_max = 180;
@@ -68,7 +68,7 @@ public:
             if (pred > 0)
                 pred -= 5;
             else
-                cout << "Samochod nie moze jechac wolniej bo stoi" << endl;
+                throw true;
             czesci[0]->SetValue(pred);
         }
     }
@@ -77,7 +77,7 @@ public:
     {
         int b = czesci[2]->GetValue();
         if (b == 0)
-            cout << "Nie ma nizszego biegu" << endl;
+            throw 1.0;
         else
         {
             b -= 1;
@@ -93,7 +93,6 @@ public:
         if (b == 0)
         {
             obroty = 0;
-            //cout << "Najpierw wrzuc bieg" << endl;
         }
         else if (b == 1)
             obroty = 100 * v;

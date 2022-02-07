@@ -31,23 +31,60 @@ int main()
         cin >> komenda;
         if (komenda == "w")
         {
-            w.ZwiekszPredkosc();
-            w.SetObroty();
+            try
+            {
+                w.ZwiekszPredkosc();
+                w.SetObroty();
+            }
+            catch (int e)
+            {
+                cout << "Najpierw wrzuc bieg!!!" << endl;
+            }
+            catch (string e)
+            {
+                cout << "Nie mozesz jechac szybciej!!!" << endl;
+            }
+          
         }
         else if (komenda == "s")
         {
-            w.ZmniejszPredkosc();
-            w.SetObroty();
+            try
+            {
+                w.ZmniejszPredkosc();
+                w.SetObroty();
+            }
+            catch (int e)
+            {
+                cout << "Najpierw wrzuc bieg!!!" << endl;
+            }
+            catch (bool e)
+            {
+                cout << "Nie mozesz jechac wolniej!!!" << endl;
+            }
         }
         else if (komenda == "d")
         {
-            w.ZwiekszBieg();
-            w.SetObroty();
+            try
+            {
+                w.ZwiekszBieg();
+                w.SetObroty();
+            }
+            catch (char e)
+            {
+                cout << "Nie ma wyzszego biegu!!!" << endl;
+            }
         }
         else if (komenda == "a")
         {
-            w.ZmniejszBieg();
-            w.SetObroty();
+            try 
+            {
+                w.ZmniejszBieg();
+                w.SetObroty();
+            }
+            catch (double e)
+            {
+                cout << "Nie ma nizszego biegu!!!" << endl;
+            }
         }
         else if (komenda == "t")
         {
